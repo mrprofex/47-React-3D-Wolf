@@ -1,15 +1,12 @@
 import React from "react";
 import { Canvas, useThree } from "@react-three/fiber";
-import {OrbitControls} from "@react-three/drei";
+import { OrbitControls, useGLTF } from "@react-three/drei";
 
 const Dog = () => {
-  useThree(({ camera, scene, gl }) => {
-    
-    console.log(camera.position);
-  });
+  const scene = useGLTF("/models/dog.drc.glb");
   return (
     <>
-      
+      <primitive object={scene} />
       <OrbitControls />
     </>
   );
