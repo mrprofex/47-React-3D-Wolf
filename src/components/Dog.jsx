@@ -9,10 +9,7 @@ const Dog = () => {
   });
   return (
     <>
-      <mesh>
-        <meshBasicMaterial color={0x00ff00} />
-        <boxGeometry args={[1, 1, 1]} />
-      </mesh>
+      
       <OrbitControls />
     </>
   );
